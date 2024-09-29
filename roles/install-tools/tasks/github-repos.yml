@@ -68,7 +68,7 @@
 - name: "Install/Setup gdb-peda-pwndbg-gef"
   shell: |
     cd /opt/pwn/gdb-peda-pwndbg-gef
-    ./install
+    ./install.sh
 
 - name: "Install/Setup RSA CTF Tool"
   shell: |
