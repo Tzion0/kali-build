@@ -27,9 +27,9 @@
   become: true
   become_method: sudo
 
-- name: Install PowerShell using snap
-  community.general.snap:
-    name: powershell
-    state: present
-  become: true
-  become_method: sudo
+# - name: Install PowerShell using snap
+#   community.general.snap:
+#     name: powershell
+#     state: present
+#   become: true
+#   become_method: sudo
