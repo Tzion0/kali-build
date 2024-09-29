@@ -18,6 +18,7 @@
     - rubyntlm
     - winrm-fs
     - evil-winrm
+    - zsteg
   become: true
   become_method: sudo
 
