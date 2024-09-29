@@ -3,7 +3,7 @@
   file:
     path: /opt/red/
     state: directory
-    mode: '0755'
+    mode: '0777'
   become: true
   become_method: sudo
 
@@ -11,7 +11,7 @@
   file:
     path: /opt/web/
     state: directory
-    mode: '0755'
+    mode: '0777'
   become: true
   become_method: sudo
 
@@ -19,7 +19,7 @@
   file:
     path: /opt/stego/
     state: directory
-    mode: '0755'
+    mode: '0777'
   become: true
   become_method: sudo
 
@@ -35,7 +35,7 @@
   file:
     path: /opt/for/
     state: directory
-    mode: '0755'
+    mode: '0777'
   become: true
   become_method: sudo
 
@@ -43,7 +43,7 @@
   file:
     path: /opt/crypto/
     state: directory
-    mode: '0755'
+    mode: '0777'
   become: true
   become_method: sudo
 
