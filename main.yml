@@ -4,7 +4,7 @@
   connection: local
   roles:
     - role: "roles/configure-tmux"
-    - role: "roles/configure-logging"
+    #- role: "roles/configure-logging"
     - role: "roles/configure-system"
     - role: "roles/customize-browser"
     - role: "roles/customize-terminal"
