@@ -3,7 +3,11 @@
   apt:
     name: snapd
     state: present
-  when: ansible_facts['os_family'] == "Debian"
+
+- name: Ensure snapd service is started
+  service:
+    name: snapd
+    state: started
 
 - name: Install ngrok using snap
   community.general.snap:
