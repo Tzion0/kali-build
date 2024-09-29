@@ -3,3 +3,5 @@
   community.general.npm:
     name: wscat
     global: true
+  become: true
+  become_method: sudo
