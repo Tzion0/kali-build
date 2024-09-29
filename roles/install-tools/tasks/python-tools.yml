@@ -9,25 +9,25 @@
 #     - { name: 'crackmapexec', url: 'git+https://github.com/Porchetta-Industries/CrackMapExec.git' }
 #     - { name: 'certipy-ad', url: 'git+https://github.com/ly4k/Certipy.git' }
 
-- name: "Install pipx tools from PyPI"
-  community.general.pipx:
-    name: "{{ item }}"
-    state: latest
-  loop:
-    - kube-hunter
-    - firefed
-    - wafw00f
-    - sslyze
-    - droopescan
-    - sqlmap
-    - volatility3
-    - frida-dexdump
-    - oletools
-    - uncompyle6
-    - decompyle3
-    - stegoveritas
-    - termcolor
-    - cprint
+# - name: "Install pipx tools from PyPI"
+#   community.general.pipx:
+#     name: "{{ item }}"
+#     state: latest
+#   loop:
+#     - kube-hunter
+#     - firefed
+#     - wafw00f
+#     - sslyze
+#     - droopescan
+#     - sqlmap
+#     - volatility3
+#     - frida-dexdump
+#     - oletools
+#     - uncompyle6
+#     - decompyle3
+#     - stegoveritas
+#     - termcolor
+#     - cprint
 
 - name: "Install tools using pip3 with --break-system-packages"
   pip:
@@ -43,5 +43,20 @@
     - fickling
     - pycryptodomex
     - requests
+
+    - kube-hunter
+    - firefed
+    - wafw00f
+    - sslyze
+    - droopescan
+    - sqlmap
+    - volatility3
+    - frida-dexdump
+    - oletools
+    - uncompyle6
+    - decompyle3
+    - stegoveritas
+    - termcolor
+    - cprint
   become: true
   become_method: sudo
