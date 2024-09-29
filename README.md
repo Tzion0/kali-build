@@ -1,7 +1,7 @@
-** Make sure to pip install ansible, apt has an older copy **
+** Make sure to pip3 install ansible, apt has an older copy **
 
 # Instructions
-* Start with Parrot HTB Edition
+* Start with Kali.
 * Install Ansible (python3 -m pip install ansible)
 * Clone and enter the repo (git clone)
 * ansible-galaxy install -r requirements.yml
