@@ -8,3 +8,28 @@
     - { name: 'impacket', url: 'git+https://github.com/fortra/impacket.git' }
     - { name: 'crackmapexec', url: 'git+https://github.com/Porchetta-Industries/CrackMapExec.git' }
     - { name: 'certipy-ad', url: 'git+https://github.com/ly4k/Certipy.git' }
+    - { name: 'kube-hunter', url: 'kube-hunter' }
+    - { name: 'firefed', url: 'firefed' }
+    - { name: 'wafw00f', url: 'wafw00f' }
+    - { name: 'sslyze', url: 'sslyze' }
+    - { name: 'droopescan', url: 'droopescan' }
+    - { name: 'sqlmap', url: 'sqlmap' }
+    - { name: 'angr', url: 'angr' }
+
+- name: "Install pip3 tools"
+  pip:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - volatility3
+    - frida-dexdump
+    - oletools
+    - pwntools
+    - pefile
+    - z3-solver
+    - malduck
+    - uncompyle6
+    - decompyle3
+    - keystone-engine
+    - stegoveritas
+    - fickling
