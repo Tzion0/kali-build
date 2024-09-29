@@ -74,21 +74,29 @@
   shell: |
     cd /opt/crypto/RsaCtfTool
     python3 -m venv ~/Envs/rsactftool
-    source ~/Envs/rsactftool/bin/activate
-    pip3 install -r requirements.txt
+    . ~/Envs/rsactftool/bin/activate
+    pip3 install --break-system-packages -r requirements.txt
     deactivate
+  args:
+    executable: /bin/bash
+  become: true
 
 - name: "Install/Setup Pycdc"
   shell: |
-    cd /opt/rev/pycdc
     cmake .
     make
+  args:
+    chdir: /opt/rev/pycdc
+  become: true
 
 - name: "Install/Setup Demovfuscator"
   shell: |
-    cd /opt/rev/demovfuscator
     cmake .
     make
+  args:
+    chdir: /opt/rev/demovfuscator
+  become: true
+
     
 - name: Create temporary build directory
   ansible.builtin.tempfile:
