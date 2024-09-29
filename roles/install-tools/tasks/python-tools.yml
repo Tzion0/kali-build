@@ -1,5 +1,5 @@
 ---
-- name: "Install pipx tools"
+- name: "Install pipx tools from git repositories"
   community.general.pipx:
     name: "{{ item.name }}"
     source: "{{ item.url }}"
@@ -8,19 +8,19 @@
     - { name: 'impacket', url: 'git+https://github.com/fortra/impacket.git' }
     - { name: 'crackmapexec', url: 'git+https://github.com/Porchetta-Industries/CrackMapExec.git' }
     - { name: 'certipy-ad', url: 'git+https://github.com/ly4k/Certipy.git' }
-    - { name: 'kube-hunter', url: 'kube-hunter' }
-    - { name: 'firefed', url: 'firefed' }
-    - { name: 'wafw00f', url: 'wafw00f' }
-    - { name: 'sslyze', url: 'sslyze' }
-    - { name: 'droopescan', url: 'droopescan' }
-    - { name: 'sqlmap', url: 'sqlmap' }
-    - { name: 'angr', url: 'angr' }
 
-- name: "Install pip3 tools"
-  pip:
+- name: "Install pipx tools from PyPI"
+  community.general.pipx:
     name: "{{ item }}"
     state: latest
   loop:
+    - kube-hunter
+    - firefed
+    - wafw00f
+    - sslyze
+    - droopescan
+    - sqlmap
+    - angr
     - volatility3
     - frida-dexdump
     - oletools
