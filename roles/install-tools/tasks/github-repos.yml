@@ -73,7 +73,7 @@
 - name: "Install/Setup RSA CTF Tool"
   shell: |
     cd /opt/crypto/RsaCtfTool
-    pip3 install -r "requirements.txt"
+    pipx install -r "requirements.txt"
 
 - name: "Install/Setup Pycdc"
   shell: |
