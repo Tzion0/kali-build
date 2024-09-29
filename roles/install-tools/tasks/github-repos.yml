@@ -73,7 +73,10 @@
 - name: "Install/Setup RSA CTF Tool"
   shell: |
     cd /opt/crypto/RsaCtfTool
-    pipx install -r "requirements.txt"
+    python3 -m venv ~/Envs/rsactftool/bin/activate
+    source ~/Envs/rsactftool/bin/activate
+    pip3 install -r requirements.txt
+    deactivate
 
 - name: "Install/Setup Pycdc"
   shell: |
