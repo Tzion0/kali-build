@@ -1,11 +1,4 @@
 ---
-- name: "Ensure the universe repository is added"
-  apt_repository:
-    repo: "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
-    state: present
-  become: true
-  become_method: sudo
-  
 - name: "Updating apt repo/cache"
   apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
   become: true
@@ -141,3 +134,4 @@
     state: latest
   become: true
   become_method: sudo
+  ignore_errors: yes
