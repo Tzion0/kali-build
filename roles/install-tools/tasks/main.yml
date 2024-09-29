@@ -1,9 +1,9 @@
 ---
-- include: apt-stuff.yml
-- include: go-tools.yml
-- include: github-repos.yml
-- include: python-tools.yml
-- include: gem-tools.yml
-- include: npm-tools.yml
-- include: snap-tools.yml
-- include: wget-tools.yml
+- include_tasks: apt-stuff.yml
+- include_tasks: go-tools.yml
+- include_tasks: github-repos.yml
+- include_tasks: python-tools.yml
+- include_tasks: gem-tools.yml
+- include_tasks: npm-tools.yml
+- include_tasks: snap-tools.yml
+- include_tasks: wget-tools.yml
