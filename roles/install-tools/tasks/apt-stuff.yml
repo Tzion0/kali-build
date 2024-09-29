@@ -41,7 +41,7 @@
       - ascii
       - unrar
       - kazam
-      - mlocate
+      # - mlocate
       - mkvtoolnix 
       - mkvtoolnix-gui
       - sqlite3
