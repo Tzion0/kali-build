@@ -33,3 +33,7 @@
     - keystone-engine
     - stegoveritas
     - fickling
+    - termcolor
+    - cprint
+    - pycryptodomex
+    - requests
