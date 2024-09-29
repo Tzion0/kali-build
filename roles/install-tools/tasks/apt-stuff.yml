@@ -37,6 +37,7 @@
     - npm
     - xclip
     - strace
+    - keystone-engine
     - gimp
     - tmux
     - tree
