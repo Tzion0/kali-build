@@ -64,6 +64,28 @@
   become: true
   become_method: sudo
 
+- name: "Install/Setup gdb-peda-pwndbg-gef"
+  shell: |
+    cd /opt/pwn/gdb-peda-pwndbg-gef
+    ./install
+
+- name: "Install/Setup RSA CTF Tool"
+  shell: |
+    cd /opt/crypto/RsaCtfTool
+    pip3 install -r "requirements.txt"
+
+- name: "Install/Setup Pycdc"
+  shell: |
+    cd /opt/rev/pycdc
+    cmake .
+    make
+
+- name: "Install/Setup Demovfuscator"
+  shell: |
+    cd /opt/rev/demovfuscator
+    cmake .
+    make
+    
 - name: Create temporary build directory
   ansible.builtin.tempfile:
     state: directory
