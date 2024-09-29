@@ -1,11 +1,66 @@
 ---
-- name: "Installing useful github repos"
+- name: "Ensure /opt/red/ directory exists"
+  file:
+    path: /opt/red/
+    state: directory
+    mode: '0755'
+  become: true
+  become_method: sudo
+
+- name: "Ensure /opt/web/ directory exists"
+  file:
+    path: /opt/web/
+    state: directory
+    mode: '0755'
+  become: true
+  become_method: sudo
+
+- name: "Ensure /opt/stego/ directory exists"
+  file:
+    path: /opt/stego/
+    state: directory
+    mode: '0755'
+  become: true
+  become_method: sudo
+
+- name: "Ensure /opt/rev/ directory exists"
+  file:
+    path: /opt/rev/
+    state: directory
+    mode: '0755'
+  become: true
+  become_method: sudo
+
+- name: "Ensure /opt/for/ directory exists"
+  file:
+    path: /opt/for/
+    state: directory
+    mode: '0755'
+  become: true
+  become_method: sudo
+
+- name: "Ensure /opt/crypto/ directory exists"
+  file:
+    path: /opt/crypto/
+    state: directory
+    mode: '0755'
+  become: true
+  become_method: sudo
+
+
+
+- name: "Installing useful GitHub repos"
   git:
     repo: "{{ item.repo }}"
     dest: "{{ item.location }}"
   loop:
-    - { repo: "https://github.com/Flangvik/SharpCollection", location: "/opt/SharpCollection" }
-    - { repo: "https://github.com/danielmiessler/SecLists", location: "/opt/SecLists" }
+    - { repo: "https://github.com/Flangvik/SharpCollection", location: "/opt/red/SharpCollection" }
+    - { repo: "https://github.com/danielmiessler/SecLists", location: "/opt/red/SecLists" }
+    - { repo: "https://github.com/apogiatzis/gdb-peda-pwndbg-gef", location: "/opt/pwn/gdb-peda-pwndbg-gef" }
+    - { repo: "https://github.com/RsaCtfTool/RsaCtfTool", location: "/opt/crypto/RsaCtfTool" }
+    - { repo: "https://github.com/ticarpi/jwt_tool", location: "/opt/web/jwt_tool" }
+    - { repo: "https://github.com/zrax/pycdc", location: "/opt/rev/pycdc" }
+    - { repo: "https://github.com/leetonidas/demovfuscator", location: "/opt/rev/demovfuscator" }
   become: true
   become_method: sudo
 
@@ -27,13 +82,15 @@
 - name: "Downloading github releases"
   shell: "{{ build_dir.path }}/githubdownload.py {{ item.repo }} {{ item.regex }} {{ item.location }} {% if item.filename is defined %}{{ item.filename }}{% endif %}"
   loop:
-    - { repo: "jpillora/chisel",  regex: "_linux_amd64.gz", location: "/opt/chisel" }
-    - { repo: "jpillora/chisel",  regex: "_windows_amd64.gz", location: "/opt/chisel" }
+    - { repo: "jpillora/chisel",  regex: "_linux_amd64.gz", location: "/opt/red/chisel" }
+    - { repo: "jpillora/chisel",  regex: "_windows_amd64.gz", location: "/opt/red/chisel" }
     #- { repo: "jpillora/chisel",  regex: "_darwin_amd64", location: "/opt/chisel", filename: "chisel_osx" }
-    - { repo: "carlospolop/PEASS-ng",  regex: "linpeas.sh", location: "/opt/peas" }
-    - { repo: "carlospolop/PEASS-ng",  regex: "winPEASx64.exe", location: "/opt/peas" }
-    - { repo: "WithSecureLabs/chainsaw",  regex: "chainsaw_all_", location: "/opt/" }
-    - { repo: "BloodHoundAD/BloodHound", regex: "BloodHound-linux-x64.zip", location: "/opt/" }
+    - { repo: "carlospolop/PEASS-ng",  regex: "linpeas.sh", location: "/opt/red/peas" }
+    - { repo: "carlospolop/PEASS-ng",  regex: "winPEASx64.exe", location: "/opt/red/peas" }
+    - { repo: "WithSecureLabs/chainsaw",  regex: "chainsaw_all_", location: "/opt/for" }
+    - { repo: "BloodHoundAD/BloodHound", regex: "BloodHound-linux-x64.zip", location: "/opt/red" }
+    - { repo: "io12/pwninit", regex: "pwninit", location: "/opt/pwn" }
+    - { repo: "rafiibrahim8/iSteg", regex: "iSteg-v2.1_GUI.jar", location: "/opt/stego" }
   async: 45
   poll: 0
   become: true
