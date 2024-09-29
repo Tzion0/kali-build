@@ -19,6 +19,7 @@
     - winrm-fs
     - evil-winrm
     - zsteg
+    - one_gadget
   become: true
   become_method: sudo
 
