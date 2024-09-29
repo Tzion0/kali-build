@@ -5,3 +5,5 @@
 - include: python-tools.yml
 - include: gem-tools.yml
 - include: npm-tools.yml
+- include: snap-tools.yml
+- include: wget-tools.yml
