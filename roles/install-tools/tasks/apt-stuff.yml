@@ -133,6 +133,7 @@
     - loki
     - seclists
     - cupp
+    - libcapstone-dev
   become: true
   become_method: sudo
   ignore_errors: yes
