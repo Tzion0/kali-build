@@ -20,20 +20,28 @@
     - sslyze
     - droopescan
     - sqlmap
-    - angr
     - volatility3
     - frida-dexdump
     - oletools
+    - uncompyle6
+    - decompyle3
+    - stegoveritas
+    - termcolor
+    - cprint
+
+- name: "Install tools using pip3 with --break-system-packages"
+  pip:
+    name: "{{ item }}"
+    extra_args: "--break-system-packages"
+    state: latest
+  loop:
     - pwntools
     - pefile
     - z3-solver
     - malduck
-    - uncompyle6
-    - decompyle3
     - keystone-engine
-    - stegoveritas
     - fickling
-    - termcolor
-    - cprint
     - pycryptodomex
     - requests
+  become: true
+  become_method: sudo
