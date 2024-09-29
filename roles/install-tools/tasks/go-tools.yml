@@ -3,7 +3,7 @@
   shell: go install github.com/ropnop/kerbrute@master
 
 - name: "install waybackurls"
-  shell: go get github.com/tomnomnom/waybackurls
+  shell: go install github.com/tomnomnom/waybackurls@latest
 
 - name: "install ffuf"
-  shell: go get -u github.com/ffuf/ffuf
+  shell: go install github.com/ffuf/ffuf@latest
