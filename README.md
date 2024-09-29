@@ -2,7 +2,7 @@
 
 # Instructions
 * Start with Kali.
-* Install Ansible (python3 -m pip install ansible)
+* Install Ansible (pipx install --include-deps ansible)
 * Clone and enter the repo (git clone)
 * ~/.local/bin/ansible-galaxy install -r requirements.yml
 * Make sure we have a sudo token (sudo whoami)
