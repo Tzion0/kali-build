@@ -3,11 +3,15 @@
   apt:
     name: snapd
     state: present
-
+  become: true
+  become_method: sudo
+  
 - name: Ensure snapd service is started
   service:
     name: snapd
     state: started
+  become: true
+  become_method: sudo
 
 - name: Install ngrok using snap
   community.general.snap:
