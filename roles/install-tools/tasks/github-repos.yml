@@ -90,13 +90,13 @@
     chdir: /opt/rev/pycdc
   become: true
 
-- name: "Install/Setup Demovfuscator"
-  shell: |
-    cmake .
-    make
-  args:
-    chdir: /opt/rev/demovfuscator
-  become: true
+# - name: "Install/Setup Demovfuscator"
+#   shell: |
+#     cmake .
+#     make
+#   args:
+#     chdir: /opt/rev/demovfuscator
+#   become: true
 
     
 - name: Create temporary build directory
