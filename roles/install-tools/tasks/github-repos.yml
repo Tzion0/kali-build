@@ -53,6 +53,7 @@
   git:
     repo: "{{ item.repo }}"
     dest: "{{ item.location }}"
+    force: yes
   loop:
     - { repo: "https://github.com/Flangvik/SharpCollection", location: "/opt/red/SharpCollection" }
     - { repo: "https://github.com/danielmiessler/SecLists", location: "/opt/red/SecLists" }
