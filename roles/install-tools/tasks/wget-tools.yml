@@ -1,0 +1,5 @@
+---
+- name: Download Stegsolve.jar using wget
+  get_url:
+    url: http://www.caesum.com/handbook/Stegsolve.jar
+    dest: /opt/stego/stegsolve.jar
