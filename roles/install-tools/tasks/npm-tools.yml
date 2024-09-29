@@ -1,3 +1,4 @@
+---
 - name: Install "wscat" node.js package globally.
   community.general.npm:
     name: wscat
