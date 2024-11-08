@@ -134,6 +134,7 @@
     - seclists
     - cupp
     - libcapstone-dev
+    - checksec
   become: true
   become_method: sudo
   ignore_errors: yes
