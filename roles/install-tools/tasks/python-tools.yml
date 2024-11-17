@@ -58,5 +58,6 @@
     - stegoveritas
     - termcolor
     - cprint
+    - frida-tools
   become: true
   become_method: sudo
