@@ -17,3 +17,6 @@
 * Mate-Terminal Colors, I show how to configure it here (https://www.youtube.com/watch?v=2y68gluYTcc). I just did the steps in that video on my old VM to backup the color scheme, then copied it to this repo.
 * Evil-Winrm/Certipy/SharpCollection/CME/Impacket, will make a video for these soon
 * Updated BurpSuite Activation. Later versions of ansible would hang if a shell script started a process that didn't die. Put a timeout on the java process
+
+# TODO
+- Add zsteg & volatility
