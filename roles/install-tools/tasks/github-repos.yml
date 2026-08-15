@@ -53,6 +53,7 @@
   git:
     repo: "{{ item.repo }}"
     dest: "{{ item.location }}"
+    version: HEAD
     force: yes
   loop:
     - { repo: "https://github.com/Flangvik/SharpCollection", location: "/opt/red/SharpCollection" }
