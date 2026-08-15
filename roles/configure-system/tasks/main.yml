@@ -1,2 +1,2 @@
 ---
-- include_tasks: "configure-sudoers.yml"
+- import_tasks: "configure-sudoers.yml"
