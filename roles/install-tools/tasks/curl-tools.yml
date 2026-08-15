@@ -10,3 +10,9 @@
     cmd: curl -fsSL https://chatgpt.com/codex/install.sh | sh
   args:
     executable: /bin/sh
+
+- name: "Install hedr"
+  shell:
+    cmd: curl -fsSL https://herdr.dev/install.sh | sh
+  args:
+    executable: /bin/sh
