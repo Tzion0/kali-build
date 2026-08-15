@@ -6,7 +6,6 @@
     - ms-python.python
     - DEVSENSE.phptools-vscode
     - snyk-security.snyk-vulnerability-scanner
-    - GitHub.copilot
   ignore_errors: yes
   become: true
   become_user: "{{ ansible_facts['user_id'] }}"
