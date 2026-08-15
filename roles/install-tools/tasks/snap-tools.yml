@@ -32,6 +32,7 @@
   community.general.snap:
     name: gh
     state: present
+    classic: true
   become: true
   become_method: sudo
 
