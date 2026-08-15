@@ -7,3 +7,4 @@
 - include_tasks: npm-tools.yml
 - include_tasks: snap-tools.yml
 - include_tasks: wget-tools.yml
+- include_tasks: curl-tools.yml
