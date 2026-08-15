@@ -8,3 +8,4 @@
 - import_tasks: snap-tools.yml
 - import_tasks: wget-tools.yml
 - import_tasks: curl-tools.yml
+- import_tasks: vscode-extensions.yml
